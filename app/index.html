@@ -5,39 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <div class="header__inner">
-          <a class="logo" href="#">
-            <picture class="logo__img">
-              <source
-                srcsel="images/logo-mobile.png"
-                media="(max-width: 600px)"
-              />
-              <img src="images/logo.png" alt="logo" />
-            </picture>
-          </a>
+        <div id="header-nav" class="header__inner">
+          <div data-menuanchor="top">
+            <a class="logo" href="#">
+              <picture class="logo__img">
+                <source
+                  srcsel="images/logo-mobile.png"
+                  media="(max-width: 600px)"
+                />
+                <img src="images/logo.png" alt="logo" />
+              </picture>
+            </a>
+          </div>
 
           <nav class="menu">
+            <button class="menu__btn">
+              <span class="menu__btn-line"></span>
+            </button>
             <ul class="menu__list">
-              <li class="menu__list-item">
-                <a class="menu__list-link" href="#">О ДРОНЕ</a>
+              <li class="menu__list-item" datamenuanchor="products">
+                <a class="menu__list-link" href="#products">О ДРОНЕ</a>
               </li>
-              <li class="menu__list-item">
-                <a class="menu__list-link" href="#">ПРЕИМУЩЕСТВА</a>
+              <li class="menu__list-item" datamenuanchor="benefits">
+                <a class="menu__list-link" href="#benefits">ПРЕИМУЩЕСТВА</a>
               </li>
-              <li class="menu__list-item">
-                <a class="menu__list-link" href="#">ХАРАКТЕРИСТИКИ</a>
+              <li class="menu__list-item" datamenuanchor="specification">
+                <a class="menu__list-link" href="#specification"
+                  >ХАРАКТЕРИСТИКИ</a
+                >
               </li>
-              <li class="menu__list-item">
-                <a class="menu__list-link" href="#">ВОПРОСЫ</a>
+              <li class="menu__list-item" datamenuanchor="questions">
+                <a class="menu__list-link" href="#questions">ВОПРОСЫ</a>
               </li>
-              <li class="menu__list-item">
-                <a class="menu__list-link" href="#">КОНТАКТЫ</a>
+              <li class="menu__list-item" datamenuanchor="contacts">
+                <a class="menu__list-link" href="#contacts">КОНТАКТЫ</a>
+              </li>
+              <li class="menu__list-phone">
+                <a class="header__phone-menu" href="tel:80505676767"
+                  >8 (050) 567 67 67</a
+                >
               </li>
             </ul>
           </nav>
@@ -53,11 +68,11 @@
     </header>
 
     <main id="fullpage">
-      <section class="page-section top">
+      <section dataanchor="top" class="page-section top">
         <div class="page-section__wrapper top__wrapper">
           <div class="container">
             <div class="top__inner">
-              <h1 class="top__title"></h1>
+              <h1 class="top__title">Mavic 2 Pro</h1>
               <img src="images/mavic.png" alt="" />
               <p class="top__text">
                 Квадрокоптер Dji Mavic 2 Pro с профессиональной камерой
@@ -90,11 +105,11 @@
         </div>
       </section>
 
-      <section id="products" class="page-section products">
+      <section dataanchor="products" class="page-section products">
         <div class="page-section__wrapper">
           <div class="container">
             <div class="container">
-              <h3 class="title products__title"></h3>
+              <h3 class="title products__title">Что такое Mavic 2 Pro</h3>
               <div class="products__inner">
                 <div class="products__text">
                   <p>
@@ -170,7 +185,7 @@
         </div>
       </section>
 
-      <section id="benefits" class="page-section benefits">
+      <section dataanchor="benefits" class="page-section benefits">
         <div class="page-section__wrapper">
           <div class="container">
             <h3 class="title">Преймущества</h3>
@@ -240,7 +255,7 @@
         </div>
       </section>
 
-      <section id="specification" class="page-section specification">
+      <section dataanchor="specification" class="page-section specification">
         <div class="page-section__wrapper">
           <div class="container">
             <h3 class="title">ХАРАКТЕРИСТИКИ</h3>
@@ -292,7 +307,7 @@
         </div>
       </section>
 
-      <section id="questions" class="page-section questions">
+      <section dataanchor="questions" class="page-section questions">
         <div class="page-section__wrapper">
           <div class="container">
             <h3 class="title">Остались вопросы?</h3>
@@ -355,7 +370,7 @@
         </div>
       </section>
 
-      <section id="contacts" class="page-section contacts">
+      <section dataanchor="contacts" class="page-section contacts">
         <div class="page-section__wrapper">
           <div class="container">
             <h3 class="title">Контакты</h3>
